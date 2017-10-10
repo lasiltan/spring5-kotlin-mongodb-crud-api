@@ -1,0 +1,10 @@
+version: '2.2'
+services:
+  mongo:
+    image: mongo:latest
+    container_name: "mongo-dev"
+    ports:
+      - 34567:27017
+    environment:
+              - MONGO_DATA_DIR=/data/db
+              - MONGO_LOG_DIR=/var/log/mongo
